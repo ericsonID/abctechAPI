@@ -34,7 +34,7 @@ public class AssistanceServiceMockTest {
 
         List<Assistance> values = assistanceService.getAssistanceList();
 
-        Assertions.assertEquals(2, values.size());
+        Assertions.assertEquals(3, values.size());
         Assertions.assertSame(values.get(0), assistance1);
         Assertions.assertSame(values.get(1), assistance2);
     }
