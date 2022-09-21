@@ -1,8 +1,9 @@
-package br.com.fiap.abctechapi;
+package br.com.fiap.abctechapi.service;
 
-import br.com.fiap.abctechapi.impl.AssistanceServiceImplementation;
+import br.com.fiap.abctechapi.service.impl.AssistanceServiceImplementation;
 import br.com.fiap.abctechapi.model.Assistance;
 import br.com.fiap.abctechapi.repository.IAssistanceRepository;
+import br.com.fiap.abctechapi.service.IAssistanceService;
 import org.junit.jupiter.api.*;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;

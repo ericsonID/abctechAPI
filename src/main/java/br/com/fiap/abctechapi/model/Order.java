@@ -25,7 +25,7 @@ public class Order {
     private Long operatorId;
 
     @ManyToMany
-    private List<Assistance> services;
+    private List<Assistance> assists;
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "start_order_location_id", foreignKey = @ForeignKey(name ="FK_start_order_id"))
@@ -37,10 +37,10 @@ public class Order {
 
 
     public boolean hasMinAssists (){
-        return services.size() > 0;
+        return assists.size() > 0;
     }
 
     public boolean exceedsMaxAssists () {
-        return services.size() > 15;
+        return assists.size() > 15;
     }
 }
