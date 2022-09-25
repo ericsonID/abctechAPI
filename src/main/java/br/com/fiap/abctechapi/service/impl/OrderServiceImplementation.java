@@ -37,11 +37,11 @@ public class OrderServiceImplementation implements IOrderService {
         order.setAssists(assistances);
 
         if(!order.hasMinAssists()){
-            throw new Exception();
-            //throw new MinimumAssistRequiredException("Invalid Assists", "Necessario no minimo 1 assistencia");
+            //throw new Exception();
+            throw new MinimumAssistRequiredException("Invalid Assists", "Necessário no minímo 1 assistência");
         }else if (order.exceedsMaxAssists()){
-            throw new Exception();
-            //throw new MaxAssistsException("Invalid Assists", "Número máximo de assistências é 15");
+            //throw new Exception();
+            throw new MaxAssistsException("Invalid Assists", "Número máximo de assistências é 15");
         }
 
         orderRepository.save(order);

@@ -1,6 +1,14 @@
 package br.com.fiap.abctechapi.handler.exception;
 
-public class MinimumAssistRequiredException extends Throwable {
-    public MinimumAssistRequiredException(String invalid_assists, String s) {
+import lombok.Getter;
+
+@Getter
+public class MinimumAssistRequiredException extends RuntimeException{
+    private String description;
+
+    public MinimumAssistRequiredException(String message, String description){
+        super(message);
+        this.description =  description;
     }
+
 }
