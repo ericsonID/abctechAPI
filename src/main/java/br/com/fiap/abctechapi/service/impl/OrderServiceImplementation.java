@@ -48,6 +48,10 @@ public class OrderServiceImplementation implements IOrderService {
     }
 
     @Override
+    public Order getOrderById(Long orderId){
+        return orderRepository.findById(orderId).orElseThrow();
+    }
+    @Override
     public List<Order> listOrderByOperator(Long operationId) {
         return null;
     }

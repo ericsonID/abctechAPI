@@ -1,9 +1,13 @@
 package br.com.fiap.abctechapi.handler;
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.Date;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class ErrorMessageResponse {
     private Integer statusCode;

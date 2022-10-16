@@ -8,6 +8,9 @@ import java.util.List;
 
 public interface IOrderService {
     void saveOrder(Order order, List<Long> arrayAssists) throws Exception;
+
+    Order getOrderById(Long orderId);
+
     List<Order> listOrderByOperator(Long operationId);
 
 }
