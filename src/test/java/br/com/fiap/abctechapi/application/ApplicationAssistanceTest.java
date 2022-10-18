@@ -26,7 +26,7 @@ public class ApplicationAssistanceTest {
     public void init() {
         MockitoAnnotations.openMocks(this);
         assistanceService = new AssistanceServiceImplementation(assistanceRepository);
-        assistanceApplication = new AssistanceApplicationImplementation();
+        assistanceApplication = new AssistanceApplicationImplementation(assistanceService);
     }
 
     @Test

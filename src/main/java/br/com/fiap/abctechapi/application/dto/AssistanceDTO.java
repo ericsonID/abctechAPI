@@ -1,7 +1,11 @@
 package br.com.fiap.abctechapi.application.dto;
 
-import lombok.Data;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Data
 public class AssistanceDTO {
 
